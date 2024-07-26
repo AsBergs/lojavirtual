@@ -3,7 +3,7 @@ import { ref, reactive, onMounted } from 'vue'
 import ModelosApi from '@/api/modelos'
 import MarcasApi from '@/api/marcas'
 import CategoriasApi from '@/api/categorias'
-import Button from '../components/ButtonComp.vue'
+import Button from '../components/ButtonComponent.vue'
 
 const modelosApi = new ModelosApi()
 const marcasApi = new MarcasApi()

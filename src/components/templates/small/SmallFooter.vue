@@ -1,12 +1,12 @@
 <script setup>
-import { ref } from 'vue'
-import { onBeforeRouteUpdate } from 'vue-router'
+import { ref } from 'vue';
+import { onBeforeRouteUpdate } from 'vue-router';
 
-const showMenu = ref(false)
+const showMenu = ref(false);
 
 onBeforeRouteUpdate(() => {
-  showMenu.value = false
-})
+  showMenu.value = false;
+});
 </script>
 <template>
   <div id="footerMenu" :style="{ display: showMenu ? 'block' : 'none' }">
@@ -20,25 +20,32 @@ onBeforeRouteUpdate(() => {
     </RouterLink>
   </div>
   <div class="icons">
-    <RouterLink to="/">
-      <i class="mdi mdi-home-outline" />
-      Home
+    <RouterLink to="/acessorios" class="icon-link">
+      <i class="icon mdi mdi-tire" />
     </RouterLink>
-    <RouterLink to="/">
-      <i class="mdi mdi-account-circle-outline" />
-      Perfil
+    <RouterLink to="/categorias" class="icon-link">
+      <i class="mdi mdi-car-convertible" />
     </RouterLink>
-    <RouterLink to="/">
-      <i class="mdi mdi-cart-outline" />
-      Carrinho
+    <RouterLink to="/cores" class="icon-link">
+      <i class="icon mdi mdi-palette" />
+    </RouterLink>
+    <RouterLink to="/marcas" class="icon-link">
+      <i class="icon mdi mdi-watermark" />
+    </RouterLink>
+    <RouterLink to="/modelos" class="icon-link">
+      <i class="icon mdi mdi-van-passenger" />
+    </RouterLink>
+    <RouterLink to="/veiculos" class="icon-link">
+      <i class="icon mdi mdi-car-back" />
     </RouterLink>
 
     <div class="hamburger" @click="showMenu = !showMenu">
       <i class="mdi mdi-menu" />
-      Menu
     </div>
   </div>
 </template>
+
+
 <style scoped>
 #footerMenu {
   position: fixed;
